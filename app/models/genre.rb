@@ -2,6 +2,7 @@ class Genre < ActiveRecord::Base
   has_many :songs
   has_many :artists, through: :songs
 
+
   def song_count
     # return the number of songs in a genre
     self.songs.count
@@ -17,4 +18,5 @@ class Genre < ActiveRecord::Base
     self.artists.map do |artist|
       artist.name
   end
+end
 end
